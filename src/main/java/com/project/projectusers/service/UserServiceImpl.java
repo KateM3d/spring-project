@@ -7,11 +7,11 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private List<User> users = new ArrayList<>();
 
-    public UserServiceImpl() {
-        users.add(new User(1, "John"));
-        users.add(new User(2, "Jane"));
+    private List<User> users;
+
+    public UserServiceImpl(List<User> users) {
+        this.users = users;
     }
 
     @Override
